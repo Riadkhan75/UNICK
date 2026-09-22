@@ -1,0 +1,6 @@
+{
+  "name": "UNICK",
+  "description": "UNICK - Premium e-commerce shopping in Bangladesh with genuine products, cash on delivery, and instant order tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

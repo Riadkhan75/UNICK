@@ -1,0 +1,69 @@
+{
+  "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/master/schema/firestore-blueprint.json",
+  "entities": {
+    "Product": {
+      "collection": "products",
+      "fields": {
+        "id": { "type": "string", "required": true },
+        "name": { "type": "string", "required": true },
+        "nameBn": { "type": "string", "required": false },
+        "slug": { "type": "string", "required": true },
+        "category": { "type": "string", "required": true },
+        "price": { "type": "number", "required": true },
+        "originalPrice": { "type": "number", "required": true },
+        "stock": { "type": "number", "required": true },
+        "image": { "type": "string", "required": true },
+        "rating": { "type": "number", "required": false },
+        "reviewCount": { "type": "number", "required": false },
+        "shortDescription": { "type": "string", "required": false },
+        "description": { "type": "string", "required": false },
+        "isHot": { "type": "boolean", "required": false },
+        "isNew": { "type": "boolean", "required": false },
+        "isFeatured": { "type": "boolean", "required": false },
+        "colors": { "type": "array", "required": false },
+        "sizes": { "type": "array", "required": false }
+      }
+    },
+    "Order": {
+      "collection": "orders",
+      "fields": {
+        "id": { "type": "string", "required": true },
+        "customer": { "type": "object", "required": true },
+        "items": { "type": "array", "required": true },
+        "subtotal": { "type": "number", "required": true },
+        "deliveryCharge": { "type": "number", "required": true },
+        "deliveryZone": { "type": "string", "required": true },
+        "discount": { "type": "number", "required": true },
+        "couponCode": { "type": "string", "required": false },
+        "total": { "type": "number", "required": true },
+        "paymentMethod": { "type": "string", "required": true },
+        "paymentTrxId": { "type": "string", "required": false },
+        "status": { "type": "string", "required": true },
+        "courierName": { "type": "string", "required": false },
+        "courierTrackingCode": { "type": "string", "required": false },
+        "createdAt": { "type": "string", "required": true }
+      }
+    },
+    "StoreSettings": {
+      "collection": "settings",
+      "fields": {
+        "storeName": { "type": "string", "required": true },
+        "storeTagline": { "type": "string", "required": false },
+        "phone": { "type": "string", "required": true },
+        "whatsappNumber": { "type": "string", "required": true },
+        "email": { "type": "string", "required": false },
+        "address": { "type": "string", "required": false },
+        "currencySymbol": { "type": "string", "required": true },
+        "currencyCode": { "type": "string", "required": true },
+        "deliveryChargeInside": { "type": "number", "required": true },
+        "deliveryChargeOutside": { "type": "number", "required": true },
+        "freeDeliveryThreshold": { "type": "number", "required": true },
+        "noticeBarText": { "type": "string", "required": false },
+        "noticeBarActive": { "type": "boolean", "required": true },
+        "bkashNumber": { "type": "string", "required": false },
+        "nagadNumber": { "type": "string", "required": false },
+        "adminPin": { "type": "string", "required": false }
+      }
+    }
+  }
+}

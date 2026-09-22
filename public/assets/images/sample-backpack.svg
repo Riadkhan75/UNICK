@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <linearGradient id="bagGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="pocketGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bgGrad1)" rx="24"/>
+  <!-- Handle -->
+  <path d="M165 110 C165 70, 235 70, 235 110" fill="none" stroke="#475569" stroke-width="12" stroke-linecap="round"/>
+  <!-- Main Bag Body -->
+  <path d="M120 150 C120 100, 280 100, 280 150 L290 320 C290 340, 275 350, 255 350 L145 350 C125 350, 110 340, 110 320 Z" fill="url(#bagGrad)"/>
+  <!-- Top Zip Curve -->
+  <path d="M135 150 C135 125, 265 125, 265 150" fill="none" stroke="#64748B" stroke-width="4" stroke-dasharray="6,4"/>
+  <!-- Front Zipper Pocket -->
+  <rect x="135" y="210" width="130" height="115" rx="16" fill="url(#pocketGrad)"/>
+  <line x1="150" y1="235" x2="250" y2="235" stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="200" cy="275" r="14" fill="#1E40AF"/>
+  <path d="M194 275 L206 275 M200 269 L200 281" stroke="#BFDBFE" stroke-width="3" stroke-linecap="round"/>
+  <!-- Side mesh pockets -->
+  <path d="M106 220 L110 310 L120 315 L118 225 Z" fill="#475569"/>
+  <path d="M294 220 L290 310 L280 315 L282 225 Z" fill="#475569"/>
+  <!-- Straps subtle bottom -->
+  <rect x="145" y="340" width="30" height="20" rx="4" fill="#0F172A"/>
+  <rect x="225" y="340" width="30" height="20" rx="4" fill="#0F172A"/>
+</svg>

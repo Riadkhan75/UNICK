@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="shoesBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF2F8" />
+      <stop offset="100%" stop-color="#FCE7F3" />
+    </linearGradient>
+    <linearGradient id="soleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <linearGradient id="upperGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F97316" />
+      <stop offset="100%" stop-color="#EA580C" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#shoesBg)" rx="24"/>
+  <!-- Shoe Upper Body -->
+  <path d="M70 240 C90 190, 160 170, 200 170 C240 170, 270 200, 310 230 C335 250, 345 270, 340 290 L70 290 Z" fill="url(#upperGrad)"/>
+  <!-- Ankle Collar -->
+  <path d="M125 180 C140 155, 175 155, 195 180" fill="none" stroke="#C2410C" stroke-width="14" stroke-linecap="round"/>
+  <!-- Dynamic swoosh / stripe design -->
+  <path d="M130 250 C190 220, 260 235, 305 270" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M150 260 C200 240, 250 250, 280 275" fill="none" stroke="#FDBA74" stroke-width="6" stroke-linecap="round"/>
+  <!-- Laces -->
+  <line x1="190" y1="180" x2="215" y2="200" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <line x1="210" y1="195" x2="235" y2="215" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <line x1="230" y1="210" x2="255" y2="230" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <!-- Thick Modern Sole / Cushion -->
+  <path d="M60 290 C60 285, 350 285, 350 290 L345 320 C330 330, 240 330, 170 330 C110 330, 65 320, 60 290 Z" fill="url(#soleGrad)" stroke="#CBD5E1" stroke-width="2"/>
+  <!-- Air bubble or accent in sole -->
+  <rect x="90" y="298" width="60" height="14" rx="7" fill="#F97316" opacity="0.3"/>
+  <rect x="95" y="301" width="50" height="8" rx="4" fill="#F97316"/>
+  <!-- Bottom grip -->
+  <line x1="80" y1="325" x2="330" y2="325" stroke="#94A3B8" stroke-width="3" stroke-dasharray="10,6"/>
+</svg>

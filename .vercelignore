@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Local env files
+.env.local
+.env.*.local
+
+# Build output
+dist
+.vite
+
+# System & editor files
+.DS_Store
+*.log
+.git
