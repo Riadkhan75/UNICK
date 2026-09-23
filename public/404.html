@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNICK</title>
+    <script>
+      // Single Page Application (SPA) redirect for static hosts (GitHub Pages, Vercel fallback)
+      // When a direct route like /adminriad gives 404, redirect to root with route query/hash
+      var path = window.location.pathname;
+      if (path && path !== '/') {
+        window.location.replace('/?route=' + encodeURIComponent(path) + window.location.search + window.location.hash);
+      } else {
+        window.location.replace('/');
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>

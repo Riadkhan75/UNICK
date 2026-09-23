@@ -131,6 +131,22 @@ export const Header: React.FC<HeaderProps> = () => {
               )}
             </button>
 
+            {/* Quick Admin Portal Button */}
+            <button
+              onClick={() => {
+                try {
+                  window.history.pushState({}, '', '/adminriad');
+                } catch {}
+                setView('admin');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="p-2 text-slate-400 hover:text-amber-600 hover:bg-amber-50 rounded-full transition-colors hidden sm:flex items-center"
+              aria-label="Admin Portal"
+              title="অ্যাডমিন পোর্টাল (/adminriad)"
+            >
+              <Lock className="w-4 h-4 stroke-[2]" />
+            </button>
+
             {/* Cart Drawer Trigger */}
             <button
               id="header-cart-toggle-btn"

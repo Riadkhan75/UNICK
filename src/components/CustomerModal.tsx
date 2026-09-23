@@ -248,12 +248,29 @@ export const CustomerModal: React.FC = () => {
                 <LogOut className="w-4 h-4" />
                 <span>লগআউট করুন</span>
               </button>
-              <button
-                onClick={() => setIsCustomerModalOpen(false)}
-                className="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl"
-              >
-                ঠিক আছে
-              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    try {
+                      window.history.pushState({}, '', '/adminriad');
+                    } catch {}
+                    setIsCustomerModalOpen(false);
+                    setView('admin');
+                  }}
+                  className="px-3 py-2 text-slate-500 hover:text-amber-600 text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors"
+                  title="Admin Portal"
+                >
+                  <Lock className="w-3.5 h-3.5 text-amber-500" />
+                  <span>Admin</span>
+                </button>
+                <button
+                  onClick={() => setIsCustomerModalOpen(false)}
+                  className="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl"
+                >
+                  ঠিক আছে
+                </button>
+              </div>
             </div>
           </div>
         ) : (
