@@ -12,7 +12,8 @@ import {
   ShieldCheck,
   Clock,
   Mail,
-  Loader2
+  Loader2,
+  Lock
 } from 'lucide-react';
 
 export const CustomerModal: React.FC = () => {
@@ -358,9 +359,25 @@ export const CustomerModal: React.FC = () => {
               </button>
             </form>
 
-            <div className="pt-2 flex items-center justify-center gap-1.5 text-[11px] text-slate-500">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-              <span>আপনার ব্যক্তিগত তথ্য সম্পূর্ণ সুরক্ষিত</span>
+            <div className="pt-2 flex items-center justify-between text-[11px] text-slate-500">
+              <span className="flex items-center gap-1">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                <span>আপনার তথ্য সম্পূর্ণ সুরক্ষিত</span>
+              </span>
+              <button
+                type="button"
+                onClick={() => {
+                  try {
+                    window.history.pushState({}, '', '/adminriad');
+                  } catch {}
+                  setIsCustomerModalOpen(false);
+                  setView('admin');
+                }}
+                className="text-slate-400 hover:text-amber-600 flex items-center gap-1 font-medium transition-colors"
+              >
+                <Lock className="w-3 h-3 text-amber-500" />
+                <span>অ্যাডমিন লগইন</span>
+              </button>
             </div>
           </div>
         )}

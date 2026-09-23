@@ -91,16 +91,16 @@ export const AdminRiadPortal: React.FC = () => {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-rose-600/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-md w-full relative z-10 space-y-6">
-        {/* Access Denied Warning Banner */}
-        <div className="bg-rose-950/40 border border-rose-500/30 rounded-3xl p-5 text-center shadow-2xl backdrop-blur-md">
-          <div className="w-14 h-14 bg-rose-500/20 text-rose-400 rounded-2xl mx-auto flex items-center justify-center mb-3 ring-8 ring-rose-500/10">
-            <ShieldAlert className="w-7 h-7" />
+        {/* Admin Portal Header Banner */}
+        <div className="bg-slate-900/90 border border-amber-500/30 rounded-3xl p-5 text-center shadow-2xl backdrop-blur-md">
+          <div className="w-14 h-14 bg-amber-500/20 text-amber-400 rounded-2xl mx-auto flex items-center justify-center mb-3 ring-8 ring-amber-500/10">
+            <Lock className="w-7 h-7" />
           </div>
-          <h2 className="text-xl font-extrabold text-rose-200 tracking-tight">
-            অ্যাক্সেস ডিনাইড (Access Denied)
+          <h2 className="text-xl font-extrabold text-amber-200 tracking-tight">
+            অ্যাডমিন প্যানেল পোর্টাল (Admin Portal)
           </h2>
-          <p className="text-xs text-rose-300/80 mt-1.5 leading-relaxed">
-            এই পেজটি একটি সংরক্ষিত অ্যাডমিন ডোমেইন (/adminriad)। যথাযথ অনুমতি ও সেশন-ভিত্তিক ভেরিফিকেশন ছাড়া প্রবেশ নিষেধ।
+          <p className="text-xs text-slate-300 mt-1.5 leading-relaxed">
+            {settings.storeName} স্টোর ম্যানেজমেন্ট ও অর্ডার প্রসেসিংয়ের জন্য লগইন করুন।
           </p>
         </div>
 

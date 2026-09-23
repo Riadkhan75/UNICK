@@ -303,6 +303,29 @@ export const ProductView: React.FC = () => {
             </button>
           </div>
 
+          {/* PRODUCT DESCRIPTION - PLACED DIRECTLY ABOVE ORDER FORM */}
+          <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-4 sm:p-5 space-y-3">
+            <div className="flex items-center gap-2 border-b border-slate-200 pb-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+              <h3 className="text-sm sm:text-base font-extrabold text-slate-900">
+                পণ্যের বিস্তারিত বিবরণ (Product Description)
+              </h3>
+            </div>
+            <div className="text-slate-700 text-xs sm:text-sm leading-relaxed space-y-3">
+              <p className="whitespace-pre-line">{product.description}</p>
+              <div className="bg-white rounded-xl p-3 border border-slate-200/80">
+                <h4 className="font-bold text-slate-900 text-xs sm:text-sm mb-1.5">
+                  পণ্যটি কেন আপনার পছন্দ হবে?
+                </h4>
+                <ul className="space-y-1 text-xs text-slate-600 list-disc list-inside">
+                  <li>১০০% জেনুইন ও আসল প্রডাক্টের নিশ্চয়তা।</li>
+                  <li>ক্যাশ অন ডেলিভারিতে চেক করে রিসিভ করার সুযোগ।</li>
+                  <li>নিরাপদ ও নির্ভরযোগ্য হোম ডেলিভারি সেবা।</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           {/* 1-CLICK CASH ON DELIVERY FORM BOX */}
           <div
             id="direct-cod-order-box"

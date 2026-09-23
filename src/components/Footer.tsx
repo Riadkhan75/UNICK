@@ -9,7 +9,8 @@ import {
   CheckCircle2,
   Clock,
   Heart,
-  MessageCircle
+  MessageCircle,
+  Lock
 } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -128,6 +129,21 @@ export const Footer: React.FC = () => {
                   প্রাইভেসি পলিসি
                 </span>
               </li>
+              <li className="pt-1 border-t border-slate-800/80">
+                <button
+                  onClick={() => {
+                    try {
+                      window.history.pushState({}, '', '/adminriad');
+                    } catch {}
+                    setView('admin');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="inline-flex items-center gap-1.5 text-slate-400 hover:text-amber-400 font-semibold transition-colors"
+                >
+                  <Lock className="w-3.5 h-3.5 text-amber-500" />
+                  <span>অ্যাডমিন প্যানেল (/adminriad)</span>
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -180,9 +196,23 @@ export const Footer: React.FC = () => {
         {/* Copyright Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} {settings.storeName}. সর্বস্বত্ব সংরক্ষিত।</p>
-          <p className="flex items-center gap-1 text-slate-400">
-            নিরাপদ ই-কমার্স শপিং প্ল্যাটফর্ম
-          </p>
+          <div className="flex items-center gap-3">
+            <span className="text-slate-400">নিরাপদ ই-কমার্স শপিং প্ল্যাটফর্ম</span>
+            <span className="text-slate-700">|</span>
+            <button
+              onClick={() => {
+                try {
+                  window.history.pushState({}, '', '/adminriad');
+                } catch {}
+                setView('admin');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="text-slate-500 hover:text-slate-300 transition-colors inline-flex items-center gap-1"
+            >
+              <Lock className="w-3 h-3" />
+              <span>Admin</span>
+            </button>
+          </div>
         </div>
       </div>
     </footer>

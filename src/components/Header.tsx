@@ -10,7 +10,8 @@ import {
   User,
   Camera,
   Layers,
-  ChevronRight
+  ChevronRight,
+  Lock
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -235,6 +236,23 @@ export const Header: React.FC<HeaderProps> = () => {
             <span>হটলাইন: {settings.phone}</span>
             <span className="text-emerald-600 font-bold">ক্যাশ অন ডেলিভারি</span>
           </div>
+
+          <button
+            onClick={() => {
+              try {
+                window.history.pushState({}, '', '/adminriad');
+              } catch {}
+              setView('admin');
+              setMobileMenuOpen(false);
+            }}
+            className="w-full text-left py-2 text-xs font-semibold text-slate-500 hover:text-amber-600 flex items-center justify-between pt-2 border-t border-slate-100"
+          >
+            <div className="flex items-center gap-2">
+              <Lock className="w-3.5 h-3.5 text-amber-500" />
+              <span>অ্যাডমিন পোর্টাল (/adminriad)</span>
+            </div>
+            <ChevronRight className="w-4 h-4 text-slate-300" />
+          </button>
         </div>
       )}
     </header>
